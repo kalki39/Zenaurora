@@ -27,6 +27,14 @@
             .then(response => response.text())
             .then(data => document.getElementById("header").innerHTML = data)
             .catch(error => console.error("Error loading header:", error));
+        fetch("footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer").innerHTML = data)
+        .catch(error => console.error("Error loading header:", error));
+        fetch("sidebar.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("sidebar").innerHTML = data)
+            .catch(error => console.error("Error loading header:", error)); 
     </script>
 </head>
 
@@ -54,100 +62,17 @@
         </div>
     </div>
     <!-- preloader end -->
-
+    <div id="myAlert" class="custom-alert">
+        <p>Form submitted successfully! We will contact you soon.</p>
+        <button onclick="hideAlert()">OK</button>
+      </div>
     <!-- Header area start -->
     <div id="header" style="height: 132px;"></div>
     <!-- Header area end -->
 
     <!-- Offcanvas area start -->
-    <div class="fix">
-        <div class="bd-offcanvas-area">
-            <div class="bd-offcanvas-wrapper">
-                <div class="bd-offcanvas-content">
-                    <div class="bd-offcanvas-top d-flex justify-content-between align-items-center mb-30">
-                        <div class="bd-offcanvas-logo">
-                            <a href="index.html">
-                                <img src="assets/images/logo/logo.svg" alt="logo not found">
-                            </a>
-                        </div>
-                        <div class="bd-offcanvas-close">
-                            <button class="bd-offcanvas-close-icon animation--flip">
-                                <span class="bd-offcanvas-m-lines">
-                                <span class="bd-offcanvas-m-line line--1"></span><span
-                                    class="bd-offcanvas-m-line line--2"></span><span
-                                    class="bd-offcanvas-m-line line--3"></span>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="bd-offcanvas-search mb-30">
-                        <form action="#">
-                            <input type="text" name="bd-offcanvasSearch" placeholder="Search here">
-                            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        </form>
-                    </div>
-                    <div class="bd-mobile-menu-smaller">
-                        <div class="bd-offcanvas-menu mb-30">
-                            <nav></nav>
-                        </div>
-                    </div>
-                    <div class="bd-offcanvas-about d-none d-lg-block mb-30">
-                        <h4 class="bd-offcanvas-title-meta">About Zenaurora</h4>
-                        <p>Empowering learners and educators with a comprehensive platform that bridges the gap between traditional and modern education. Zenaurora inspires excellence in education and fosters growth for a brighter future.</p>
-                    </div>
-                    <div class="bd-offcanvas-contact mb-30">
-                        <h4 class="bd-offcanvas-title-meta">Contact Info</h4>
-                        <ul>
-                            <li class="d-flex align-items-center gap-10">
-                                <div class="bd-offcanvas-contact-icon">
-                                    <a target="_blank" href="#">
-                                        <i class="fal fa-map-marker-alt"></i></a>
-                                </div>
-                                <div class="bd-offcanvas-contact-text">
-                                    <a target="_blank" href="#">123 Knowledge Lane, Learnville, 54321, USA</a>
-                                </div>
-                            </li>
-                            <li class="d-flex align-items-center gap-10">
-                                <div class="bd-offcanvas-contact-icon">
-                                    <a href="tel:+1234567890"><i class="far fa-phone"></i></a>
-                                </div>
-                                <div class="bd-offcanvas-contact-text">
-                                    <a href="tel:+1234567890">+1-234-567-890</a>
-                                </div>
-                            </li>
-                            <li class="d-flex align-items-center gap-10">
-                                <div class="bd-offcanvas-contact-icon">
-                                    <a href="https://html.topylo.com/cdn-cgi/l/email-protection#dab3b4bcb59ab3a9aeafbea3f4b9b5b7"><i class="fal fa-envelope"></i></a>
-                                </div>
-                                <div class="bd-offcanvas-contact-text">
-                                    <a href="https://html.topylo.com/cdn-cgi/l/email-protection#1e777078715e776d6a6b7a67307d7173"><span class="__cf_email__" data-cfemail="98f1f6fef7d8f1ebecedfce1b6fbf7f5">[email&#160;protected]</span></a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="bd-offcanvas-btn-wrap mb-30">
-                        <h4 class="bd-offcanvas-title-meta">Account</h4>
-                        <div class="bd-offcanvas-btn d-flex align-items-center gap-30">
-                            <a class="bd-btn btn-primary" href="sign-in.html">Log In</a>
-                            <a class="bd-btn btn-outline-border-secondary" href="sign-up.html">Get Started</a>
-                        </div>
-                    </div>
-                    <div class="bd-offcanvas-social">
-                        <h4 class="bd-offcanvas-title-meta">Follow Us</h4>
-                        <div class="theme-social">
-                            <ul class="social-icon-list">
-                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+     <div id="sidebar"></div>
+    
     <div class="bd-offcanvas-overlay"></div>
     <div class="bd-offcanvas-overlay-white"></div>
     <!-- Offcanvas area start -->
@@ -305,6 +230,7 @@
                         <div class="bd-contact-form-wrapper">
                             <div class="bd-section-title-wrapper section-title-space">
                                 <h2 class="bd-section-title mb-20">Get in touch</h2>
+                                <button onclick="showAlert()">Show Alert</button>
                                 <p class="bd-section-paragraph">Our friendly team would love to hear from you.</p>
                             </div>
                             <div class="bd-contact-form">
@@ -368,13 +294,13 @@
                                                     <textarea id="message" name="message" placeholder="Message" required></textarea>
                                                 </div>
                                             </div>
-                                            <div class="checkbox-option">
+                                            <!-- <div class="checkbox-option">
                                                 <input id="course-check-1" type="checkbox" required>
                                                 <label for="course-check-1">You agree to our friendly <span
                                                         class="text-border-highlights"><a href="privacy-policy.html">
                                                             privacy policy</a><span
                                                             class="theme-black h-1px bottom-0"></span></span>.</label>
-                                            </div>
+                                            </div> -->
                                         </div>
 
                                         <!-- Submit Button -->
@@ -388,6 +314,13 @@
                             </div>
 
                             <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+                                function showAlert() {
+  document.getElementById('myAlert').style.display = 'block';
+}
+
+function hideAlert() {
+  document.getElementById('myAlert').style.display = 'none';
+}
                                 document.getElementById('contactForm').addEventListener('submit', function(event) {
                                     // Check if all required fields are filled
                                     event.preventDefault();
@@ -396,15 +329,18 @@
                                     } else {
                                         const fullName = document.getElementById('firstName').value;
                                         const email = document.getElementById('emailAddress').value;
+                                        const phoneNumber = document.getElementById('phoneNumber').value;
                                         const subject = document.getElementById('subject').value || "No Subject";
                                         const message = document.getElementById('message').value;
 
                                         // Construct Telegram message
-                                        const telegramMessage = `📩 *New Course Inquiry*%0A
-                                        👤 *Name:* ${fullName}%0A
-                                        📧 *Email:* ${email}%0A
-                                        🏷 *Subject:* ${subject}%0A
-                                        ✉ *Message:* ${message}`;
+                                        const telegramMessage = `📩 *New Course Inquiry*\n` +
+                                        `---------------------------\n` +
+                                        `👤 *Name:* ${fullName}\n\n` +
+                                        `📧 *Email:* ${email}\n\n` +
+                                        `📱 *Mobile:* ${phoneNumber}\n\n` +
+                                        `🏷 *Subject:* ${subject}\n\n` +
+                                        `✉ *Message:* ${message}`;
 
                                         // Telegram API URL
                                         const token = '7483395723:AAF-k2p0kMmjzOXLbbkA8JyOSsAnxMKQCrA'
@@ -416,9 +352,9 @@
                                             .then(response => response.json())
                                             .then(data => {
                                                 if (data.ok) {
-                                                    // alert('Form submitted successfully! We will contact you soon.');
+                                                    alert('Form submitted successfully! We will contact you soon.');
                                                     console.log(data);
-                                                    // document.getElementById('contactForm').reset();
+                                                    document.getElementById('contactForm').reset();
                                                 } else {
                                                     alert('Failed to send message. Try again later.');
                                                 }
@@ -501,8 +437,9 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="bd-contact-map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.3995816270603!2d-122.1726349236816!3d37.427664232078364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbb2a678bea9d%3A0x29cdf01a44fc687f!2sStanford%20University!5e0!3m2!1sen!2sbd!4v1727155102819!5m2!1sen!2sbd" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
+                            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.3995816270603!2d-122.1726349236816!3d37.427664232078364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbb2a678bea9d%3A0x29cdf01a44fc687f!2sStanford%20University!5e0!3m2!1sen!2sbd!4v1727155102819!5m2!1sen!2sbd" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe> -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.37480748702!2d80.22963187484095!3d12.947851587365275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d00a7353193%3A0x922b34dc8d22fc3c!2sChennai%20One%20IT%20SEZ!5e0!3m2!1sen!2skz!4v1741539467113!5m2!1sen!2skz" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
@@ -514,123 +451,7 @@
     <!-- Body main wrapper end -->
 
     <!-- footer area start -->
-    <footer class="bd-footer-area fix">
-        <div class="bd-footer-area-main-content section-space theme-bg-05">
-            <div class="container">
-                <div class="row gy-30 justify-content-between">
-                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-8 col-sm-12">
-                        <div class="bd-footer-widget footer-1-col-1">
-                            <div class="bd-footer-widget-content">
-                                <div class="bd-footer-widget-logo">
-                                    <a href="index.html">
-                                        <img src="assets/images/logo/logo.svg" alt="image">
-                                    </a>
-                                </div>
-                                <p class="bd-footer-widget-description">Education focused website or template is an
-                                    essential part that provides visitors with insights into the program. </p>
-                                <div class="bd-footer-widget-contact-info">
-                                    <div class="bd-footer-widget-contact-item">
-                                        <span>Phone:</span>
-                                        <a href="tell:123456789">
-                                            +123-4567-8900</a>
-                                    </div>
-                                    <div class="bd-footer-widget-contact-item">
-                                        <span>Email:</span>
-                                        <a href="https://html.topylo.com/cdn-cgi/l/email-protection#127b616667766b527f737b7e3c717d7f"> <span class="__cf_email__" data-cfemail="9af3e9eeeffee3daf7fbf3f6b4f9f5f7">[email&#160;protected]</span></a>
-                                    </div>
-                                    <div class="bd-footer-widget-contact-item">
-                                        <span>Address:</span>
-                                        <a href="#"> 27 Division St, New York</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                        <div class="bd-footer-widget footer-1-col-2">
-                            <h6 class="bd-footer-widget-title">Online Platform</h6>
-                            <div class="bd-footer-widget-links list-none">
-                                <ul>
-                                    <li class="underline"><a href="about-university.html">About Us</a></li>
-                                    <li class="underline"><a href="courses-grid-right.html">Our Programs</a></li>
-                                    <li class="underline"><a href="event.html">Events</a></li>
-                                    <li class="underline"><a href="instructor.html">Instructor</a></li>
-                                    <li class="underline"><a href="instructor-details.html">Instructor Details</a></li>
-                                    <li class="underline"><a href="apply-online.html">Admission</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                        <div class="bd-footer-widget footer-1-col-3">
-                            <h6 class="bd-footer-widget-title">Useful Links</h6>
-                            <div class="bd-footer-widget-links list-none">
-                                <ul>
-                                    <li class="underline"><a href="contact.html">Contact Us</a></li>
-                                    <li class="underline"><a href="blog.html">Latest News</a></li>
-                                    <li class="underline"><a href="faq.html">FAQ’s</a></li>
-                                    <li class="underline"><a href="gallery.html">Gallery</a></li>
-                                    <li class="underline"><a href="mvs.html">Vision & Mission</a></li>
-                                    <li class="underline"><a href="sign-in.html">Sign In</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-8 col-sm-12">
-                        <div class="bd-footer-widget footer-1-col-4">
-                            <h6 class="bd-footer-widget-title mb-20">Stay Connected</h6>
-                            <div class="bd-footer-from-content mb-20">
-                                <div class="bd-footer-social">
-                                    <div class="theme-social social-brand-color">
-                                        <ul class="social-icon-list">
-                                            <li><a class="facebook" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                            </li>
-                                            <li><a class="twitter" href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                                            </li>
-                                            <li><a class="linkedin" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                            </li>
-                                            <li><a class="instagram" href="#"><i class="fa-brands fa-instagram"></i></a>
-                                            </li>
-                                            <li><a class="youtube" href="#"><i class="fa-brands fa-youtube"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <h6 class="bd-footer-widget-title mb-20">Download App</h6>
-                            <div class="bd-footer-from-content">
-                                <div class="bd-footer-app-btn d-flex align-items-center gap-15">
-                                    <a class="bd-app-btn" href="#"><img src="assets/images/icon/play-store.webp" alt="play-store"></a>
-                                    <a class="bd-app-btn" href="#"><img src="assets/images/icon/app-store.webp" alt="app-store"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="bd-footer-copyright-area pt-25 pb-20">
-            <div class="container">
-                <div class="row gy-30 align-items-center justify-content-lg-between justify-content-center">
-                    <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-8">
-                        <div class="bd-footer-copyright text-lg-start text-center">
-                            <p class="underline">© Copyright <span id="year"></span> | Developed By Zenaurora</p>
-                        </div>
-                    </div>
-                    <div class="col-xxl-5 col-xl-7 col-lg-7 col-md-12">
-                        <div class="bd-footer-copyright-list">
-                            <ul class="justify-content-lg-end justify-content-center">
-                                <li class="underline"><a href="terms-conditions.html">Terms and Conditions</a></li>
-                                <li class="underline"><a href="privacy-policy.html">Privacy and Policy</a></li>
-                                <li class="underline"><a href="purchase-guide.html">Purchase Guide</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer"></div>
     <!-- footer area end -->
 
     <!-- back to top -->
