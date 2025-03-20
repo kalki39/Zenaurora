@@ -201,8 +201,10 @@ h6, .body__overlay {
   --bd-body-primary: #FFFFFF;
   /* --bd-primary: #07A169;
   --bd-secondary: #FFB800; */
-  --bd-primary: #800484;
-  --bd-secondary: #875F9A;
+  /* --bd-primary: #800484; */
+  /* --bd-secondary: #875F9A; */
+  --bd-primary: #0d051d;
+  --bd-secondary: #bda4ff;
   --bd-success: #00db22;
   --bd-info: #0dcaf0;
   --bd-warning: #ffc107;
@@ -1061,7 +1063,7 @@ a:focus,
 
 a,
 button {
-  color: inherit;
+  /* color: inherit; */
   outline: none;
   border: none;
   background: transparent;
@@ -1477,6 +1479,7 @@ textarea:focus {
   border-radius: 0;
 }
 .accordion-common-style.accordion-sl-number .accordion-button::before {
+  padding: 10px;
   position: absolute;
   content: "";
   inset-inline-start: -15px;
@@ -8037,6 +8040,36 @@ input:checked + .switch:before {
     font-size: 24px;
   }
 }
+.bd-details-content-title-sub {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+@media (max-width: 575px) {
+  .bd-details-content-title-sub {
+    font-size: 18px;
+  }
+}
+.bd-details-content-title-sub2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+@media (max-width: 575px) {
+  .bd-details-content-title-sub2 {
+    font-size: 16px;
+  }
+  .bd-postbox-desc-sub {
+    margin-bottom: 10px !important;
+  }
+}
+
+.bd-postbox-desc-sub {
+  font-size: var(--bd-fs-p);
+    font-family: var(--bd-ff-p);
+    font-weight: var(--bd-fw-normal);
+    color: var(--bd-body-text);
+    margin-bottom: 30px;
+    line-height: 30px;
+}
 
 .bd-post-details-list {
   margin-left: 20px;
@@ -9573,9 +9606,9 @@ code {
 .bd-header-top.style-three {
   background-color: var(--bd-secondary);
 }
-.bd-header-top.style-three .bd-header-top-left ul li:first-child::before {
+/* .bd-header-top.style-three .bd-header-top-left ul li:first-child::before {
   background-color: rgba(0, 0, 0, 0.5);
-}
+} */
 .bd-header-top.style-three .bd-header-top-left ul li span {
   color: var(--bd-black);
 }
@@ -9629,7 +9662,7 @@ code {
 .bd-header-top-left ul li:first-child {
   position: relative;
 }
-.bd-header-top-left ul li:first-child:before {
+/* .bd-header-top-left ul li:first-child:before {
   position: absolute;
   content: "";
   width: 1px;
@@ -9638,7 +9671,7 @@ code {
   top: 50%;
   background-color: rgba(255, 255, 255, 0.5);
   transform: translateY(-50%);
-}
+} */
 @media (max-width: 575px) {
   .bd-header-top-left ul li:first-child:before {
     display: none;
@@ -10073,6 +10106,7 @@ code {
   left: 0;
   right: 0;
   z-index: 99;
+  /* background-color: #0057FF; */
 }
 .bd-header-transparent-two .header-style-one {
   background-color: transparent;
@@ -10267,7 +10301,7 @@ code {
 }
 .bd-header-logo img {
   max-width: 158px;
-  max-height: 7;
+  /* max-height: 7; */
   overflow: hidden;
   border-radius: 5px;
 }
@@ -16127,22 +16161,38 @@ code {
   background-size: 0 1px, 100% 1px;
   color: var(--bd-white);
 }
-.bd-category-wrapper.style-one .bd-category-item:hover .bd-category-icon svg * {
+/* .bd-category-wrapper.style-one .bd-category-item:hover .bd-category-icon svg * {
   stroke: var(--bd-white);
   color: #fff;
-}
+} */
 .bd-category-wrapper.style-one .bd-category-item:hover .bd-category-total {
   color: rgba(255, 255, 255, 0.8);
 }
+
+.bd-category-icon1 svg {
+    display: block;
+    width: 100%; /* Ensures it fills the parent container */
+    height: auto;
+    max-width: 49px; /* Matches old SVG width */
+    max-height: 49px;
+}
+
+.bd-category-icon1 {
+  display: flex;
+  align-items: center; /* Aligns vertically */
+  justify-content: center; /* Aligns horizontally */
+  width: 49px; /* Matches old SVG size */
+  height: 49px;
+}
 .bd-category-wrapper.style-one .bd-category-title {
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
   display: block;
-  background-image: linear-gradient(var(--bd-white), var(--bd-white)), linear-gradient(var(--bd-white), var(--bd-white));
+  /* background-image: linear-gradient(var(--bd-white), var(--bd-white)), linear-gradient(var(--bd-white), var(--bd-white)); */
   background-size: 0% 1px, 0 1px;
   background-position: 100% 100%, 0 83%;
   background-repeat: no-repeat;
   transition: background-size 0.4s linear;
-  padding: 0 0 1% 0;
+  /* padding: 0 0 1% 0; */
 }
 .bd-category-wrapper.style-one .bd-category-icon svg * {
   transition: all 0.3s linear;
@@ -26389,3 +26439,26 @@ code {
 /*  2.11 Range Slider 
 /*----------------------------------------*/
 /*# sourceMappingURL=../maps/main.css.map */
+
+
+.gif {
+  width: 49px;
+  height: 49px;
+  fill: none;
+}
+
+/* #header {
+   height: 122px; 
+} */
+
+header {
+  position: relative;
+  /* height: max-content; */
+}
+/* .pb_0 {
+  padding-bottom: 0px;
+} */
+
+.mb20{
+  margin-bottom: 20px;
+}

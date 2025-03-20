@@ -35,6 +35,17 @@
             .then(response => response.text())
             .then(data => document.getElementById("sidebar").innerHTML = data)
             .catch(error => console.error("Error loading header:", error));
+            document.addEventListener('DOMContentLoaded', function() {
+                function setHeaderHeight() {
+                    const innerDiv = document.getElementById('innerDiv');
+                    const header = innerDiv.parentElement;
+                    header.style.height = innerDiv.offsetHeight + 'px';
+                    console.log(header);
+                }
+
+                setHeaderHeight();
+                window.addEventListener('resize', setHeaderHeight);
+            });
     </script>
 </head>
 

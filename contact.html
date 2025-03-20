@@ -35,6 +35,17 @@
             .then(response => response.text())
             .then(data => document.getElementById("sidebar").innerHTML = data)
             .catch(error => console.error("Error loading header:", error)); 
+            document.addEventListener('DOMContentLoaded', function() {
+                function setHeaderHeight() {
+                    const innerDiv = document.getElementById('innerDiv');
+                    const header = innerDiv.parentElement;
+                    header.style.height = innerDiv.offsetHeight + 'px';
+                    console.log(header);
+                }
+
+                setHeaderHeight();
+                window.addEventListener('resize', setHeaderHeight);
+            });
     </script>
 </head>
 
@@ -62,12 +73,12 @@
         </div>
     </div>
     <!-- preloader end -->
-    <div id="myAlert" class="custom-alert">
+    <!-- <div id="myAlert" class="custom-alert">
         <p>Form submitted successfully! We will contact you soon.</p>
         <button onclick="hideAlert()">OK</button>
-      </div>
+      </div> -->
     <!-- Header area start -->
-    <div id="header" style="height: 132px;"></div>
+    <div id="header"></div>
     <!-- Header area end -->
 
     <!-- Offcanvas area start -->
@@ -230,7 +241,7 @@
                         <div class="bd-contact-form-wrapper">
                             <div class="bd-section-title-wrapper section-title-space">
                                 <h2 class="bd-section-title mb-20">Get in touch</h2>
-                                <button onclick="showAlert()">Show Alert</button>
+                                <!-- <button onclick="showAlert()">Show Alert</button> -->
                                 <p class="bd-section-paragraph">Our friendly team would love to hear from you.</p>
                             </div>
                             <div class="bd-contact-form">
@@ -344,8 +355,11 @@ function hideAlert() {
 
                                         // Telegram API URL
                                         const token = '7483395723:AAF-k2p0kMmjzOXLbbkA8JyOSsAnxMKQCrA'
+                                        const zentoken = '8087874221:AAHpuw6BWUzI9oRDStedu4JZpLbQLCiUWDY'
                                         const chat_ID = 1198072586
-                                        const telegramAPI = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_ID}&text=${telegramMessage}&parse_mode=Markdown`;
+                                        const zenchat_ID = 5594056661
+                                        // const telegramAPI = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_ID}&text=${telegramMessage}&parse_mode=Markdown`;
+                                        const telegramAPI = `https://api.telegram.org/bot${zentoken}/sendMessage?chat_id=${zenchat_ID}&text=${telegramMessage}&parse_mode=Markdown`;
 
                                         // Send data to Telegram
                                         fetch(telegramAPI)
@@ -385,7 +399,7 @@ function hideAlert() {
                     </div>
                 </div>
                 <div class="row gy-30">
-                    <div class="col-xl-3 col-lg-6 col-md-6">
+                    <!-- <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="bd-contact-address-box">
                             <div class="icon">
                                 <i class="fa-light fa-map-marker-alt"></i>
@@ -396,7 +410,7 @@ function hideAlert() {
                                 <p><a href="https://www.Zenaurora.com/" target="_blank">www.Zenaurora.com</a></p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="bd-contact-address-box">
                             <div class="icon">
@@ -404,8 +418,7 @@ function hideAlert() {
                             </div>
                             <div class="content">
                                 <h6 class="title">Call Us</h6>
-                                <p>+1 (800) 123-4567</p>
-                                <p>+1 (800) 987-6543</p>
+                                <p><a href="tel:+918438863915"><span>📞 +91-8438863915</span></a></p>
                             </div>
                         </div>
                     </div>
@@ -416,8 +429,7 @@ function hideAlert() {
                             </div>
                             <div class="content">
                                 <h6 class="title">Email Us</h6>
-                                <p><a href="https://html.topylo.com/cdn-cgi/l/email-protection#c1a8afa7ae81a8b2b5b4a5b8efa2aeac"><span class="__cf_email__" data-cfemail="076e696168476e747372637e2964686a">[email&#160;protected]</span></a></p>
-                                <p><a href="https://html.topylo.com/cdn-cgi/l/email-protection#d6a5a3a6a6b9a4a296bfa5a2a3b2aff8b5b9bb"><span class="__cf_email__" data-cfemail="64171114140b1610240d171011001d4a070b09">[email&#160;protected]</span></a></p>
+                                <p><a href="mailto:info@zenaurora.in"><span>📧 info@zenaurora.in</span></a></p>
                             </div>
                         </div>
                     </div>
@@ -428,8 +440,8 @@ function hideAlert() {
                             </div>
                             <div class="content">
                                 <h6 class="title">Visit Our Website</h6>
-                                <p><a href="https://www.Zenaurora.com/" target="_blank">www.Zenaurora.com</a></p>
-                                <p><a href="https://www.Zenaurora.info/" target="_blank">www.Zenaurora.info</a></p>
+                                <p><a href="https://www.zenaurora.in/" target="_blank">www.zenaurora.in</a></p>
+                                <!-- <p><a href="https://www.zenaurora.org/" target="_blank">www.zenaurora.org</a></p> -->
                             </div>
                         </div>
                     </div>
