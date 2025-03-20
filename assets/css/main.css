@@ -203,7 +203,9 @@ h6, .body__overlay {
   --bd-secondary: #FFB800; */
   /* --bd-primary: #800484; */
   /* --bd-secondary: #875F9A; */
-  --bd-primary: #0d051d;
+  /* --bd-primary: #0d051d;
+  --bd-secondary: #bda4ff; */
+  --bd-primary: #280136;
   --bd-secondary: #bda4ff;
   --bd-success: #00db22;
   --bd-info: #0dcaf0;
@@ -11944,12 +11946,12 @@ code {
 }
 @media only screen and (min-width: 1400px) and (max-width: 1599px) {
   .main-menu > ul {
-    gap: 0 15px;
+    gap: 0 30px;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .main-menu > ul {
-    gap: 0 10px;
+    gap: 0 20px;
   }
 }
 .main-menu > ul > li:hover > a {
@@ -12344,7 +12346,7 @@ code {
   color: var(--bd-primary);
 }
 
-.main-menu > ul > li > a::after {
+/* .main-menu > ul > li > a::after {
   content: "\f107";
   font-family: var(--ff-fontawesome);
   margin-left: 5px;
@@ -12354,6 +12356,18 @@ code {
   transition: all 0.3s 0s ease-out;
 }
 .main-menu > ul > li > a:hover::after {
+  transform: rotate(180deg);
+} */
+.main-menu .wantArrow::after {
+  content: "\f107";
+  font-family: var(--ff-fontawesome);
+  margin-left: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  display: inline-block;
+  transition: all 0.3s 0s ease-out;
+}
+.main-menu .wantArrow:hover::after {
   transform: rotate(180deg);
 }
 

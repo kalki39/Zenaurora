@@ -38,8 +38,12 @@
             }), e(".sidebar-toggle .bar-icon").on("click", function() {
                 e(".bd-offcanvas-menu").toggleClass("active")
             })
-        }), e(".bd-offcanvas-close,.bd-offcanvas-overlay,.sideClose").on("click", function() {
-            e(".bd-offcanvas-area").removeClass("info-open"), e(".bd-offcanvas-overlay").removeClass("overlay-open")
+        }), e(".bd-offcanvas-close,.bd-offcanvas-overlay,.sideClose").on("click", function(ev) {
+            console.log(ev.target);
+            if (!ev.target.closest(".bd-menu-close")) {
+                e(".bd-offcanvas-area").removeClass("info-open");
+                e(".bd-offcanvas-overlay").removeClass("overlay-open");
+            }
         }), e(".sidebar-toggle").on("click", function() {
             e(".bd-offcanvas-area").addClass("info-open"), e(".bd-offcanvas-overlay").addClass("overlay-open")
         }), e(".body-overlay").on("click", function() {
