@@ -24,6 +24,26 @@
             .then(response => response.text())
             .then(data => document.getElementById("footer").innerHTML = data)
             .catch(error => console.error("Error loading header:", error));
+            document.addEventListener("DOMContentLoaded", function () {
+    // List of allowed pages
+    const allowedPages = ["index.html", "contact.html","privacy-policy.html","terms-conditions.html","faq.html"];
+
+    // Get all anchor tags
+    // document.querySelectorAll("a").forEach((link) => {
+    //     const href = link.getAttribute("href");
+
+    //     // Check if the link is not in the allowed list and prevent navigation
+    //     if (href && !allowedPages.includes(href) && !href.startsWith("#") && !href.startsWith("mailto:") && !href.startsWith("tel:")) {
+    //         link.addEventListener("click", function (event) {
+    //             event.preventDefault();
+    //             alert("Navigation to this page is restricted!");
+    //         });
+    //         // Optionally, you can visually disable the link
+    //         // link.style.pointerEvents = "none";
+    //         // link.style.opacity = "0.5";
+    //     }
+    // });
+});
             
     </script>
 </head>
@@ -857,7 +877,7 @@
                 </div>
                 <div class="row gy-30">
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <a href="courses.html" class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
+                        <a  class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
                             <div class="bd-category-item">
                                 
                                 <span class="bd-category-icon">
@@ -893,7 +913,7 @@
                         </a>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <a href="courses.html" class="bd-category-wrapper style-one wow" data-wow-delay=".4s">
+                        <a  class="bd-category-wrapper style-one wow" data-wow-delay=".4s">
                             <div class="bd-category-item">
                                 <span class="bd-category-icon">
                                     <animated-icons
@@ -934,7 +954,7 @@
                         </a>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <a href="courses.html" class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
+                        <a  class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
                             <div class="bd-category-item">
                                 <span class="bd-category-icon">
                                     <animated-icons
@@ -953,7 +973,7 @@
                     </div>
                    
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <a href="courses.html" class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
+                        <a  class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
                             <div class="bd-category-item">
                                 <span class="bd-category-icon">
                                     <animated-icons
@@ -983,7 +1003,7 @@
                         </a>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <a href="courses.html" class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
+                        <a  class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
                             <div class="bd-category-item">
                                 <span class="bd-category-icon">
                                     <animated-icons
@@ -1013,7 +1033,7 @@
                         </a>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <a href="courses.html" class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
+                        <a  class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
                             <div class="bd-category-item">
                                 <span class="bd-category-icon">
                                     <animated-icons
@@ -1032,7 +1052,7 @@
                         </a>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <a href="courses.html" class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
+                        <a  class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
                             <div class="bd-category-item">
                                 <span class="bd-category-icon">
                                     <animated-icons
@@ -1052,7 +1072,7 @@
                     </div>
                     
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <a href="courses.html" class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
+                        <a  class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
                             <div class="bd-category-item">
                                 <span class="bd-category-icon">
                                     <animated-icons
@@ -1071,7 +1091,7 @@
                         </a>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <a href="courses.html" class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
+                        <a  class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
                             <div class="bd-category-item">
                                 <span class="bd-category-icon">
                                     <animated-icons
@@ -1090,7 +1110,7 @@
                         </a>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <a href="courses.html" class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
+                        <a  class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
                             <div class="bd-category-item">
                                 <span class="bd-category-icon">
                                     <animated-icons
@@ -1109,7 +1129,7 @@
                         </a>
                     </div>
                     <!-- <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <a href="courses.html" class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
+                        <a  class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
                             <div class="bd-category-item">
                                 <span class="bd-category-icon">
                                     <animated-icons
@@ -1128,7 +1148,7 @@
                         </a>
                     </div> -->
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <a href="courses.html" class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
+                        <a  class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
                             <div class="bd-category-item">
                                 <span class="bd-category-icon">
                                     <animated-icons
@@ -1147,7 +1167,7 @@
                         </a>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <a href="courses.html" class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
+                        <a  class="bd-category-wrapper style-one wow bdFadeInUp" data-wow-delay=".4s">
                             <div class="bd-category-item">
                                 <span class="bd-category-icon">
                                     <animated-icons
@@ -2550,7 +2570,7 @@
                                         <h4 class="bd-career-title underline"><a href="#">Enhance Your Skills and Stay Ahead</a>
                                         </h4>
                                         <div class="bd-career-btn">
-                                            <a class="bd-btn btn-primary btn-small" href="courses.html">Explore
+                                            <a class="bd-btn btn-primary btn-small" >Explore
                                                 Courses</a>
                                         </div>
                                     </div>
