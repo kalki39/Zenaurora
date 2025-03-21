@@ -1214,6 +1214,9 @@ textarea:focus {
     padding-top: 65px;
     padding-bottom: 65px;
   }
+  .pt-0 {
+    padding-top: 0px;
+  }
 }
 
 .section-space-top {
