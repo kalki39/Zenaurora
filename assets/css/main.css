@@ -8868,6 +8868,9 @@ code {
 .social-icon-style-01 ul li:hover .instagram {
   color: #E4405F;
 }
+.social-icon-style-01 ul li:hover .whatsapp {
+  color: #42e275;
+}
 .social-icon-style-01 ul li:hover .dribbble {
   color: #EA4C89;
 }
@@ -9016,6 +9019,9 @@ code {
 }
 .theme-social.social-brand-color ul li .instagram {
   background-color: #E4405F;
+}
+.theme-social.social-brand-color ul li .whatsapp {
+  background-color: #42e275;
 }
 .theme-social.social-brand-color ul li .dribbble {
   background-color: #EA4C89;
@@ -10114,12 +10120,19 @@ code {
   /* background-color: #0057FF; */
 }
 .bd-header-transparent-two .header-style-one {
-  background-color: transparent;
+  background-color: var(--bd-primary);
+  /* background-color: transparent; */
+  /* color: white; */
   box-shadow: none;
   border-bottom: 1px solid var(--bd-border-secondary);
 }
+
+img[alt="footerlogo"] { 
+  background-color: #07a1690d;
+}
 .bd-header-transparent-two .bd-sticky {
-  background-color: var(--bd-white);
+  /* background-color: var(--bd-white); */
+  background-color: var(--bd-primary);
   box-shadow: 0px 1px 2px 1px rgba(3, 11, 30, 0.06), 0px 1px 1px 0px rgba(3, 11, 30, 0.1);
   border-bottom: none;
 }
@@ -10341,7 +10354,8 @@ code {
 .bar-icon span {
   width: 28px;
   height: 2px;
-  background: var(--bd-theme-black);
+  /* background: var(--bd-theme-black); */
+  background: var(--bd-secondary);
   display: inline-block;
   transition: color 0.2s ease-out;
   margin: 0 auto;
@@ -11957,9 +11971,9 @@ code {
     gap: 0 20px;
   }
 }
-.main-menu > ul > li:hover > a {
+/* .main-menu > ul > li:hover > a {
   color: var(--bd-primary);
-}
+} */
 .main-menu > ul > li:hover > ul {
   opacity: 1;
   pointer-events: all;
@@ -11977,7 +11991,8 @@ code {
 .main-menu li a {
   font-size: 16px;
   font-weight: 500;
-  color: var(--bd-theme-black);
+  color: var(--bd-secondary);
+  /* color: var(--bd-theme-black); */
   padding: 28px 0px;
   display: inline-block;
   font-family: var(--bd-ff-body);
@@ -12339,14 +12354,16 @@ code {
 }
 
 .bd-sticky .main-menu li a {
-  color: var(--bd-theme-black);
+  /* color: var(--bd-theme-black); */
+  color: var(--bd-secondary);
 }
 .bd-sticky .main-menu li a.active {
   color: var(--bd-primary);
 }
 
 .bd-sticky .main-menu > ul > li:hover > a {
-  color: var(--bd-primary);
+  /* color: var(--bd-primary); */
+  color: var(--bd-secondary);
 }
 
 /* .main-menu > ul > li > a::after {
@@ -26479,3 +26496,9 @@ header {
 .mb20{
   margin-bottom: 20px;
 }
+
+
+
+/* #coursesDropdown option {
+  width: 100%;
+} */

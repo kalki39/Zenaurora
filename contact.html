@@ -234,7 +234,7 @@
         <!-- breadcrumb area end -->
 
         <!-- contact form area start -->
-        <section class="bd-contact-form-area section-space">
+        <section class="bd-contact-form-area pt-0 section-space">
             <div class="container">
                 <div class="row gy-30 justify-content-between align-items-center">
                     <div class="col-xl-6 col-lg-6">
@@ -283,20 +283,44 @@
                                             </div>
                                         </div>
 
+                                        <!-- <div class="col-md-12">
+                                            <div class="form-input-box">
+                                                <div class="form-input-title">
+                                                    <label for="courses">Courses<span>*</span></label>
+                                                </div>
+                                                <div class="form-input">
+                                                    <select name="courses" id="coursesDropdown" required>
+                                                        <option value="">Select a Course</option>
+                                                        <option value="AI-digital-marketing">AI-Powered Digital Marketing Course</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div> -->
+
                                         <!-- Subject Field -->
                                         <div class="col-md-12">
                                             <div class="form-input-box">
                                                 <div class="form-input-title">
-                                                    <label for="subject">Subject</label>
+                                                    <label for="subject">Location</label>
                                                 </div>
                                                 <div class="form-input">
-                                                    <input name="subject" id="subject" type="text" placeholder="Subject">
+                                                    <input name="subject" id="subject" required type="text" placeholder="Location">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-input-box">
+                                                <div class="form-input-title">
+                                                    <label for="qualification">Qualification</label>
+                                                </div>
+                                                <div class="form-input">
+                                                    <input name="qualification" required id="qualification" type="text" placeholder="Qualification">
                                                 </div>
                                             </div>
                                         </div>
 
                                         <!-- Message Field -->
-                                        <div class="col-xxl-12">
+                                        <!-- <div class="col-xxl-12">
                                             <div class="form-input-box mb-15">
                                                 <div class="form-input-title">
                                                     <label for="message">Message<span>*</span></label>
@@ -305,14 +329,14 @@
                                                     <textarea id="message" name="message" placeholder="Message" required></textarea>
                                                 </div>
                                             </div>
-                                            <!-- <div class="checkbox-option">
+                                            <div class="checkbox-option">
                                                 <input id="course-check-1" type="checkbox" required>
                                                 <label for="course-check-1">You agree to our friendly <span
                                                         class="text-border-highlights"><a href="privacy-policy.html">
                                                             privacy policy</a><span
                                                             class="theme-black h-1px bottom-0"></span></span>.</label>
-                                            </div> -->
-                                        </div>
+                                            </div>
+                                        </div> -->
 
                                         <!-- Submit Button -->
                                         <div class="col-xxl-12">
@@ -341,8 +365,10 @@ function hideAlert() {
                                         const fullName = document.getElementById('firstName').value;
                                         const email = document.getElementById('emailAddress').value;
                                         const phoneNumber = document.getElementById('phoneNumber').value;
-                                        const subject = document.getElementById('subject').value || "No Subject";
-                                        const message = document.getElementById('message').value;
+                                        // const course = document.getElementById('coursesDropdown').value;
+                                        const location = document.getElementById('subject').value;
+                                        const qualification = document.getElementById('qualification').value || "No Subject";
+                                        // const message = document.getElementById('message').value;
 
                                         // Construct Telegram message
                                         const telegramMessage = `📩 *New Course Inquiry*\n` +
@@ -350,9 +376,13 @@ function hideAlert() {
                                         `👤 *Name:* ${fullName}\n\n` +
                                         `📧 *Email:* ${email}\n\n` +
                                         `📱 *Mobile:* ${phoneNumber}\n\n` +
-                                        `🏷 *Subject:* ${subject}\n\n` +
-                                        `✉ *Message:* ${message}`;
-
+                                        `📕 *Qualification:* ${qualification}\n\n` +
+                                        `📌 *Location:* ${location}\n\n`;
+                          
+                                        
+                                        // `✉ *Course:* ${course}\n\n`
+// console.log(telegramMessage);
+// console.log(event);
                                         // Telegram API URL
                                         const token = '7483395723:AAF-k2p0kMmjzOXLbbkA8JyOSsAnxMKQCrA'
                                         const zentoken = '8087874221:AAHpuw6BWUzI9oRDStedu4JZpLbQLCiUWDY'
@@ -375,7 +405,7 @@ function hideAlert() {
                                             })
                                             .catch(error => console.error('Error:', error));
                                     }
-                                });
+                                })
                             </script>
                         </div>
                     </div>
@@ -393,14 +423,14 @@ function hideAlert() {
                 <div class="row justify-content-center">
                     <div class="col-xl-6 col-lg-8">
                         <div class="bd-section-title-wrapper section-title-space text-center">
-                            <span class="bd-section-subtitle">Locations</span>
-                            <h2 class="bd-section-title mb-20">Our Global Offices</h2>
+                            <!-- <span class="bd-section-subtitle">Locations</span> -->
+                            <h2 class="bd-section-title mb-20">Reach out to us</h2>
                         </div>
                     </div>
                 </div>
                 <div class="row gy-30">
                     
-                    <div class="col-xl-3 col-lg-6 col-md-6">
+                    <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="bd-contact-address-box">
                             <div class="icon">
                                 <i class="fa-light fa-phone"></i>
@@ -411,7 +441,18 @@ function hideAlert() {
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6">
+                    <!-- <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="bd-contact-address-box">
+                            <div class="icon">
+                                <i class="fa-brands fa-whatsapp"></i></a>
+                            </div>
+                            <div class="content">
+                                <h6 class="title">Whatsapp</h6>
+                                <p><a class="whatsapp" href="https://wa.me/918438863915" target="_blank"><span>zenaurora_academy</span></a></p>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="bd-contact-address-box">
                             <div class="icon">
                                 <!-- <i class="fa-light fa-envelope"></i> -->
@@ -423,7 +464,7 @@ function hideAlert() {
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6">
+                    <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="bd-contact-address-box">
                             <div class="icon">
                                 <i class="fa-thin fa-camera"></i>
@@ -434,7 +475,7 @@ function hideAlert() {
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6">
+                    <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="bd-contact-address-box">
                             <div class="icon">
                                 <i class="fa-brands fa-facebook"></i>
@@ -445,7 +486,7 @@ function hideAlert() {
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col-xl-3 col-lg-6 col-md-6">
+                     <!-- <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="bd-contact-address-box">
                             <div class="icon">
                                 <i class="fa-light fa-globe"></i>
@@ -453,19 +494,19 @@ function hideAlert() {
                             <div class="content">
                                 <h6 class="title">Visit Our Website</h6>
                                 <p><a href="https://www.zenaurora.in/" target="_blank">www.zenaurora.in</a></p>
-                                <!-- <p><a href="https://www.zenaurora.org/" target="_blank">www.zenaurora.org</a></p> -->
+                                <p><a href="https://www.zenaurora.org/" target="_blank">www.zenaurora.org</a></p>
                             </div>
                         </div>
-                    </div> -->
+                    </div>  -->
                 </div>
-                <!-- <div class="row">
+                 <!-- <div class="row">
                     <div class="col-xl-12">
                         <div class="bd-contact-map">
                            
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.37480748702!2d80.22963187484095!3d12.947851587365275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d00a7353193%3A0x922b34dc8d22fc3c!2sChennai%20One%20IT%20SEZ!5e0!3m2!1sen!2skz!4v1741539467113!5m2!1sen!2skz" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
-                </div> -->
+                </div>  -->
             </div>
         </section>
         <!-- contact address area end -->
