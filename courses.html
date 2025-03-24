@@ -22,31 +22,6 @@
     <link rel="stylesheet" href="assets/css/vendor/spacing.css">
     <link rel="stylesheet" href="assets/css/plugins/apexcharts.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <script>
-        fetch("header.html")
-            .then(response => response.text())
-            .then(data => document.getElementById("header").innerHTML = data)
-            .catch(error => console.error("Error loading header:", error));
-        fetch("footer.html")
-            .then(response => response.text())
-            .then(data => document.getElementById("footer").innerHTML = data)
-            .catch(error => console.error("Error loading header:", error));
-        fetch("sidebar.html")
-            .then(response => response.text())
-            .then(data => document.getElementById("sidebar").innerHTML = data)
-            .catch(error => console.error("Error loading header:", error));
-            document.addEventListener('DOMContentLoaded', function() {
-                function setHeaderHeight() {
-                    const innerDiv = document.getElementById('innerDiv');
-                    const header = innerDiv.parentElement;
-                    header.style.height = innerDiv.offsetHeight + 'px';
-                    console.log(header);
-                }
-
-                setHeaderHeight();
-                window.addEventListener('resize', setHeaderHeight);
-            });
-    </script>
 </head>
 
 <body>
@@ -1620,6 +1595,7 @@
     <script src="assets/js/plugins/apexcharts.min.js"></script>
     <script src="assets/js/plugins/typed.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/layout/layout.js"></script>
 </body>
 
 

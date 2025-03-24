@@ -749,6 +749,13 @@
                                     Watch Video
                                 </a> -->
                             </div>
+                            <div class="bd-banner-btn mt-3 d-flex-items flex-wrap gap-30">
+                                <a class="bd-btn btn-outline-border-primary" id="openFormBtn">Enquiry form</a>
+                                <!-- <a class="bd-video-btn secondary popup-video" href="https://www.youtube.com/watch?v=HKk4oLIzhhM">
+                                    <span class="icon"><i class="fa-solid fa-play"></i></span>
+                                    Watch Video
+                                </a> -->
+                            </div>
                         </div>
                         <div class="col-xxl-7 col-xl-6 col-lg-12">
                             <div class="bd-banner-thumb-wrapper position-relative">
@@ -793,6 +800,27 @@
         </section>
         <!-- banner area end -->
 
+        <div id="enquiryModal" class="modal-en">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h4 class="my-3">Enquiry Form</h4>
+                <form id="enquiryForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+    
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" required>
+    
+                    <button type="submit" class="mt-4 encBtn">Submit</button>
+                </form>
+            </div>
+        </div>
         <!-- feature area start -->
         <div class="bd-feature-area theme-bg pt-40 pb-40 bd-noise-bg">
             <div class="container">
@@ -2724,5 +2752,6 @@
     <script src="assets/js/plugins/apexcharts.min.js"></script>
     <script src="assets/js/plugins/typed.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js//enquiry/enquiry.js"></script>
 </body>
 </html>
